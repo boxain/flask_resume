@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale">
+        <meta charset="utf-8">
+        <title>首頁</title>
+        <link rel="stylesheet" type="text/css" href="../static/index.css"/>
+    </head>
+    <body>
+        <!--標頭-->
+        <nav class="head">
+            <span id="Logo">Xian</span>
+            {% if current_user.is_anonymous %}
+                <span class="content1"><a id="content_link" href="/register">Register</a></span>
+                <span class="content1"><a id="content_link" href="/login">Login</a></span>
+                
+            {% else %}
+                <span class="content2"><a id="content_link" href="/resume">Resume</a></span>
+                <span class="content2"><a id="content_link" href="/logout">Logout</a></span>
+            {% endif %}
+        </nav>
+
+
+        <!--大圖片-->
+        <div class="black"><img  src="../static/WelCome.png" width=100% height="850px"/></div>
+
+        <!--服務-->
+        <div id="service">
+            <div id="service_title">Service</div>
+            <br/><br/>
+            <div id="service_picture_words">
+                <div class="service_picture_words_split">
+                    <div><img class="service_pict" src="../static/齒輪.jpg" height="250px" width="300px"></div>
+                    <div class="service_prod">Get a good explanation</div>
+                    <br/><br/>
+                    <div class="service_content">這裡有著良好的解說方式讓你可以更好理解教程內容</div>
+                </div>
+                
+                <div class="service_picture_words_split">
+                    <div><img class="service_pict" src="../static/書.jpg" height="250px" width="250px"></div>
+                    <div class="service_prod">Get good resources</div>
+                    <br/><br/>
+                    <div class="service_content">這裡有完整的教程資源讓你不用再找其他網站</div>
+                </div>
+
+                <div class="service_picture_words_split">
+                    <div><img class="service_pict" src="../static/聯絡.jpg" height="250px" width="250px"></div>
+                    <div class="service_prod">Get good coversation</div>
+                    <br/><br/>
+                    <div class="service_content">這裡有交流管道讓你可以與作者互動了解未來的走向</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--內文-->
+        <div class="info">
+            <div id="info_title">Course</div>
+            <br/><br/><br/>
+            <div id="on">
+                <div class="picture_on"><img class=info_pict src="../static/Python-Logo.png" width="250" height="250" onclick="window.location.href='/python'" ></div>
+                <div class="picture_on"><img class=info_pict src="../static/flask.png" width="250" height="250" onclick="window.location.href='/flask'"></div>
+                <div class="picture_on"><img class=info_pict src="../static/爬蟲.jpg" width="250" height="250" onclick="window.location.href='/climb'"></div>
+            </div>
+
+            <div id="down">
+                <div class="picture_down"><img class=info_pict src="../static/MySQL.png" width="275" height="250"></div>
+                <div class="picture_down"><img class=info_pict src="../static/NoSQL.png" width="250" height="250"></div>
+            </div>
+        
+        </div>
+
+
+        <div id="about_me">  
+            <div id="why_content"><img class="about_me_pict" src="../static/This WebSite.png" height="650px" width="70%"></div>
+        </div>
+
+
+
+        <!--尾部-->
+        <div class="end">
+            <div class="end-block"><a><img class=end_pict src="../static/Gmail.png" height="35px" width="40px"></a></div>
+            <div class="end-block"><a><img class=end_pict src="../static/FB.png" height="38px" width="40px"></a></div>
+            <div class="end-block1"><a><img class=end_pict src="../static/IG.png" height="50px" width="50px"></a></div> 
+            <div class="end-block1"><a><img class=end_pict src="../static/LINE.png" height="50px" width="50px"></a></div> 
+        </div>
+
+
+        <script>
+            console.log(window);
+        </script>
+
+    </body>
+</html>

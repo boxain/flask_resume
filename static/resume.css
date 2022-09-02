@@ -1,0 +1,72 @@
+.head{
+    height: 50px;
+    background: linear-gradient(90deg, #2898ee, #69f3b9);
+}
+#Logo{
+    margin-right: 1200px;
+    font-size: 30px;
+    font-weight: bolder;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+.content{
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+#content_link{
+    font-size: 20px;
+    font-weight: bolder;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+body{
+    background-image: url("../static/body.png");
+    background-size: 100%,100%;
+}
+
+#resume{
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.end{
+    margin-top: 300px;
+    height: 60px;
+    background-color:rgb(182, 227, 229);
+    display: flex;
+}
+.end-block{
+    flex: none;
+    width: 5%;
+    margin-top: 5px;
+}
+.end-block1{
+    
+    flex: none;
+    width: 5%;
+}
+.end_pict{
+    
+    display: block;
+    margin: auto;
+}
+
+
+
+

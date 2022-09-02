@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}註冊{% endblock %}
+{% block import %}<link rel="stylesheet" type="text/css" href="../static/register.css"/>{% endblock %}
+
+{% block content %}
+<div id="form-title">幫我註冊一下帳號~</div>
+<br/><br/><br/>
+<div id="form-bolder">
+<form action="/register" method="post">
+    {{form.csrf_token}}
+    <br/><br/>
+    {{form.username}}
+    <br/><br/>
+    {{form.password}}
+    <br/><br/>
+    {{form.repeat_password}}
+    <br/><br/>
+    {{form.email}}
+    <br/><br/>
+    {% for msg in get_flashed_messages() %}
+    <div class="alert">{{msg}}</div>
+    {% endfor %}
+    <br/><br/>
+    {{form.submit}}
+    <br/><br/>
+</form>
+</div>
+{% endblock %}

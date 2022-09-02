@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}登入{% endblock %}
+{% block import %}<link rel="stylesheet" type="text/css" href="../static/login.css"/>{% endblock %}
+
+{% block content %}
+<div id="form-title">幫我登入一下帳號~</div>
+<br/><br/><br/>
+<div id="form-bolder">
+<form action="/login" method="post">
+    {{form.csrf_token}}
+    <br/><br/>
+    {{form.username}}
+    <br/><br/>
+    {{form.password}}
+    <br/><br/>
+    {% for msg in get_flashed_messages() %}
+    <div class="alert">{{msg}}</div>
+    {% endfor %}
+    <br/><br/>
+    {{form.submit}}
+    <br/><br/>
+    <input class="ForgotFrom" type="button" value="Forgot password" onclick="window.location.href='/forgot_password'">
+</form>
+</div>
+
+{% endblock %}

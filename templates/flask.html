@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Flask{% endblock %}
+{% block import %}<link rel="stylesheet" type="text/css" href="../static/course_base.css">{% endblock %}
+
+{% block content %}
+    
+    <div id="content-text">hihi</div>
+    
+    <div id="form-bolder">
+        <form action="/flask" , method="post" id="form">
+            {{form.csrf_token}}
+            {{form.add_comment}}
+            <br/><br/>
+            {{form.submit}}
+        </form>
+    </div>
+
+    <br/><br/>
+    <hr/>
+
+    <div id="comment-block">
+    {% if comments %}
+        {% for comment in comments %}
+        <div class="comments">    
+            <div class="comments_content">{{ comment['name']}}</div>
+            <br/><br/>
+            <div class="comments_content">{{ comment['time']}}</div>
+            <br/><br/>
+            <div class="comments_content">{{ comment['content']}}</div>
+            <br/><br/>
+        </div>
+        {% endfor %}    
+    {% else %}
+        <div id="No_comment">No comment</div>
+    {% endif %}
+    </div>
+
+{% endblock %}
