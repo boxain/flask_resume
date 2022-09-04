@@ -45,6 +45,3 @@ def modify_user():
         print("Failed !")
 
 
-
-#pbkdf2:sha256:260000$t5VGGPsbrXGCWL9E$2e1b945c5ba40b901d27b19a907a49eeb04b033ea90e6be60d39a990ab5b33b4
-#pbkdf2:sha256:260000$4nQ1HDrn003qxIxm$45f10b747f4808cb407cab48783fa154fe2a656d45d6528c62964186712390bf

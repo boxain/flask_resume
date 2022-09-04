@@ -1,5 +1,9 @@
 .head{
-    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
     background: linear-gradient(90deg, #0a0a0a, #444437);
 }
 #Logo{
@@ -132,6 +136,7 @@
     height: 60px;
     background-color:rgb(182, 227, 229);
     display: flex;
+    right: 0;
 }
 .end-block{
     flex: none;
